@@ -1,0 +1,2 @@
+class Sketchbook < ApplicationRecord
+end
