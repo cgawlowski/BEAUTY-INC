@@ -8,7 +8,7 @@ class CreatePictures < ActiveRecord::Migration[6.0]
       t.string :category
       t.date :publishing_date
       t.decimal :price
-
+      
       t.timestamps
     end
   end
