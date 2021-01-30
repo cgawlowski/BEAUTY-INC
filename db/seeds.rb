@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Picture.destroy_all
+
+pictures = Picture.create(
+  name: "",
+  description: "",
+  page: "",
+  format: "",
+  category: "",
+  publishing_date:
+  price: 
+)
+
