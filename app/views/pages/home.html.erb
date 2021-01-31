@@ -1,3 +1,11 @@
 <h1>Coucou Stéphanie!</h1>
 <h2>Accueil</h2>
 <h5>Une société Beauty Incorporation.</h5>
+
+<% @pictures.each do |picture| %>
+  <% if picture.page == "home" %>
+    <h2><%= picture.name %></h2>
+    <p><%= picture.description %></p>
+    <%= link_to "See details", picture_path(picture)  %>
+  <% end %>
+<% end %>

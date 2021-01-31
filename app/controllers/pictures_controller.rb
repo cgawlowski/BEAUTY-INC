@@ -3,6 +3,10 @@ class PicturesController < ApplicationController
     @pictures = Picture.all
   end
 
+  def show
+    @picture = Picture.find(params[:id])
+  end
+
   def create
   end
 
@@ -10,9 +14,6 @@ class PicturesController < ApplicationController
   end
 
   def edit
-  end
-
-  def show
   end
 
   def update

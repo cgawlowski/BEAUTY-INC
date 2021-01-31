@@ -5,10 +5,6 @@
     <h2><%= picture.name %></h2>
     <p><%= picture.description %></p>
     <p><%= picture.page %></p>
-    <p><%= picture.format %></p>
-    <p><%= picture.category %></p>
-    <p><%= picture.publishing_date %></p>
-    <p><%= picture.price %></p>
-    <p><%= picture.preview_picture %></p>
+    <%= link_to "See details", picture_path(picture)  %>
   <% end %>
 <% end %>

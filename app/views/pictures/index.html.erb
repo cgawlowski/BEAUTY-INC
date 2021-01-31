@@ -1,14 +1,8 @@
 <h1>Index pictures</h1>
-
+<p> </p>
 <% @pictures.each do |picture| %>
-  <% if picture.page == "portfolio" %>
     <h2><%= picture.name %></h2>
     <p><%= picture.description %></p>
     <p><%= picture.page %></p>
-    <p><%= picture.format %></p>
-    <p><%= picture.category %></p>
-    <p><%= picture.publishing_date %></p>
-    <p><%= picture.price %></p>
-    <p><%= picture.preview_picture %></p>
-  <% end %>
+    <%= link_to "See details", picture_path(picture)  %>
 <% end %>
