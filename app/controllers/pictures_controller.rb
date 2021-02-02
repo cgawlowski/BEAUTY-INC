@@ -7,13 +7,15 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
   end
 
+  def new
+    @pictures = Picture.new
+  end
+
   def create
   end
 
-  def new
-  end
-
   def edit
+    @picture = Picture.find(params[:id])
   end
 
   def update
