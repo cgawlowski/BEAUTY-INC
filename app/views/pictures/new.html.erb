@@ -6,14 +6,7 @@
   <%= f.text_area :description %>
 
   <%= f.label :page, "Where do you want to add this picture?" %>
-    <%= label_tag(:home, "Home") %>
-    <%= check_box_tag(:home) %>
-    <%= label_tag(:portfolio, "Portfolio") %>
-    <%= check_box_tag(:portfolio) %>
-    <%= label_tag(:sketchbook, "Sketchbook") %>
-    <%= check_box_tag(:sketchbook) %>
-    <%= label_tag(:shopping, "Shopping") %>
-    <%= check_box_tag(:shopping) %>
+  <%= f.select :page, ["Home", "Portfolio", "Sketchbook", "Shopping"] %>
 
   <%= f.label :category, "Enter a category" %>
   <%= f.text_field :category %>
@@ -21,8 +14,10 @@
   <%= f.label :price, "Enter a price" %>
   <%= f.number_field :price %>$
 
-  <%= f.label :picture %>
-  <%= f.file_field :picture %>
+  <%= f.label :photo %>
+  <%= f.file_field :photo %>
 
   <%= f.submit %>
 <% end %>
+
+<p><%= link_to 'Back to the main page', root_path %></p>

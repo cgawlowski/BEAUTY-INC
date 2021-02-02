@@ -12,6 +12,7 @@ class PicturesController < ApplicationController
   end
 
   def create
+    Picture.create(params[:picture])
   end
 
   def edit
@@ -19,6 +20,8 @@ class PicturesController < ApplicationController
   end
 
   def update
+    @picture = Picture.find(params[:id])
+    @picture.update(params[:restaurant])
   end
 
   def destroy
