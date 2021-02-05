@@ -1,9 +1,16 @@
 <h1><%= @picture.name %></h1>
-    <p><%= @picture.page %></p>
     <p><%= @picture.description %></p>
     <p><%= @picture.format %></p>
     <p><%= @picture.category %></p>
     <p><%= @picture.publishing_date %></p>
     <p><%= @picture.price %></p>
 
-    <%= link_to "Back to the Index", pictures_path  %>
+<% if @picture.page == "home" %>
+        <%= link_to "Back to the Home page", root_path  %>
+    <% elsif @picture.page == "portfolio" %>
+        <%= link_to "Back to the portfolio", portfolio_path  %>
+    <% elsif @picture.page == "sketchbook" %>
+        <%= link_to "Back to the sketchbook", sketchbook_path  %>
+    <% else @picture.page == "shopping" %>
+        <%= link_to "Back to the shopping page", shopping_path  %>
+<% end %>
