@@ -3,7 +3,9 @@
     <p><%= @picture.format %></p>
     <p><%= @picture.category %></p>
     <p><%= @picture.publishing_date %></p>
-    <p><%= @picture.price %></p>
+    <% if @picture.is_shopping_item == true %>
+        <p><%= @picture.price %></p>
+    <% end %>
 
 <% if @picture.is_home_item == true %>
         <%= link_to "Back to the Home page", root_path  %>
