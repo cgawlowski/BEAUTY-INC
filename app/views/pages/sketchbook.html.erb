@@ -1,2 +1,9 @@
 <h1>Sketchbook</h1>
 <p></p>
+<% @pictures.each do |picture| %>
+  <% if picture.is_sketchbook_item == true %>
+    <h2><%= picture.name %></h2>
+    <p><%= picture.description %></p>
+    <%= link_to "See details", picture_path(picture)  %>
+  <% end %>
+<% end %>
