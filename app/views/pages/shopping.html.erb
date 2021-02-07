@@ -1,9 +1,2 @@
 <h1>Shopping</h1>
 <p></p>
-<% @pictures.each do |picture| %>
-  <% if picture.page == "shopping" %>
-    <h2><%= picture.name %></h2>
-    <p><%= picture.description %></p>
-    <%= link_to "See details", picture_path(picture)  %>
-  <% end %>
-<% end %>

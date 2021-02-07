@@ -3,6 +3,5 @@
 <% @pictures.each do |picture| %>
     <h2><%= picture.name %></h2>
     <p><%= picture.description %></p>
-    <p><%= picture.page %></p>
     <%= link_to "See details", picture_path(picture)  %>
 <% end %>
