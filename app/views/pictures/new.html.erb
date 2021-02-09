@@ -1,23 +1,55 @@
-<%= form_for @picture do |f| %>
-  <%= f.label :name, "Enter a name" %>
-  <%= f.text_field :name %>
+<h3>Please enter new picture's details</h3>
 
-  <%= f.label :description, "Enter a description" %>
-  <%= f.text_area :description %>
+<form>
+  
+    <%= form_for(@picture) do |f| %>
 
-  <%= f.label :page, "Where do you want to add this picture?" %>
-  <%= f.select :page, ["Home", "Portfolio", "Sketchbook", "Shopping"] %>
+      <div class="form-group">
+        <%= f.label :name, "Enter a name" %>
+        <%= f.text_field :name %>
+      </div>
 
-  <%= f.label :category, "Enter a category" %>
-  <%= f.text_field :category %>
+      <div class="form-group">
+        <%= f.label :description, "Enter a description" %>
+        <%= f.text_area :description, size: "70x5" %>
+      </div>
 
-  <%= f.label :price, "Enter a price" %>
-  <%= f.number_field :price %>$
+      <div class="form-group">
+        <p>Where do you want to add this picture?</p>
 
-  <%= f.label :photo %>
-  <%= f.file_field :photo %>
+        <%= f.check_box :is_home_item %>
+        <%= f.label :is_home_item, "Home" %>
 
-  <%= f.submit %>
-<% end %>
+        <%= f.check_box :is_portfolio_item %>
+        <%= f.label :is_portfolio_item, "Portfolio" %>
+
+        <%= f.check_box :is_sketchbook_item %>
+        <%= f.label :is_sketchbook_item, "Sketchbook" %>
+
+        <%= f.check_box :is_shopping_item %>
+        <%= f.label :is_shopping_item, "Shopping" %>
+
+      </div>
+
+      <div class="form-group">
+        <%= f.label :category, "Enter a category" %>
+        <%= f.text_field :category %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :price, "Enter a price" %>
+        <%= f.number_field :price %>$
+      </div>
+
+      <div class="form-group">
+        <%= f.label :photo %>
+        <%= f.file_field :photo %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit %>
+      </div>
+    <% end %>
+</form>
 
 <p><%= link_to 'Back to the main page', root_path %></p>
