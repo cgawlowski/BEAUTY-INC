@@ -12,7 +12,12 @@ class PicturesController < ApplicationController
   end
 
   def create
-    Picture.create(params[:picture])
+    @picture = Picture.new(picture_params)
+    if @picture.save
+      redirect_to root_path(@picture)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -27,4 +32,10 @@ class PicturesController < ApplicationController
   def destroy
   end
 
+  private
+
+  def picture_params
+    params.require(:picture).permit(:name, :description, :category, :price, :is_home_item, :is_portfolio_item, :is_sketchbook_item, :is_shopping_item, :photo)
+  end
+  
 end
