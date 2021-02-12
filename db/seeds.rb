@@ -16,9 +16,9 @@ pictures = Picture.create(
   publishing_date: DateTime.new(2020,10,27),
   price: nil,
   preview_picture: "https://res.cloudinary.com/dus151ezt/image/upload/v1611971962/Beauty%27s%20website/Fuchsia_Vico_teo2bv.png",
-  is_home_item: true,
+  is_home_item: false,
   is_portfolio_item: false,
-  is_sketchbook_item: false,
+  is_sketchbook_item: true,
   is_shopping_item: false
   )
 

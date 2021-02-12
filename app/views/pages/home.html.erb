@@ -1,13 +1,6 @@
-<h1>Coucou Stéphanie!</h1>
-<h2>Accueil</h2>
-<h5>Une société Beauty Incorporation.</h5>
-
-<% @pictures.each do |picture| %>
-  <% if picture.is_home_item == true %>
-    <h2><%= picture.name %></h2>
-    <p><%= picture.description %></p>
-    <%= link_to "See details", picture_path(picture)  %>
-  <% end %>
-<% end %>
-
-<p><%= link_to "Add a new picture", new_picture_path  %></p>
+<div class="container">
+  <div class="introduction">
+    <p>Texte d’intro ici en quelques 
+    lignes. Texte à venir ! Stéphanie Simpson, Beauty inc. Je ne sais pas jusqu’où il va aller.</p>
+  </div>
+</div>
