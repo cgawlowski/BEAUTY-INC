@@ -1,0 +1,22 @@
+.footer {
+  position: absolute;
+  width: 281px;
+  height: 16px;
+  left: calc(50% - 281px/2 + 0.5px);
+  top: calc(50% - 16px/2 + 481px);
+
+  font-family: Quattrocento Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #000000;
+
+}
