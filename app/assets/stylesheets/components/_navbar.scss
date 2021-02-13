@@ -8,7 +8,9 @@
   top: 0px;
 }
 
-.logo {
+
+.logo a:link, .logo a:visited, .logo a:active  { 
+  text-decoration:none;
   width: 50%;
   height: 33px;
   font-family: Quattrocento Sans;
@@ -17,6 +19,10 @@
   font-size: 30px;
   line-height: 33px;
   color: #000000;
+}
+
+.logo a:hover {
+  font-weight: bold;
 }
 
 .menu {
@@ -31,14 +37,14 @@
   letter-spacing: 0.05em;
 }
 
-.logo a:link, .logo a:visited, .logo a:hover, .logo a:active  { 
-  text-decoration:none;
-  color: #000000;
-}
-
 .a1 a:link, .a1 a:visited, .a1 a:hover, .a1 a:active  { 
   text-decoration:none;
   color: #204676;
+}
+
+.a1 a:hover {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .a2 a:link, .a2 a:visited, .a2 a:hover, .a2 a:active  { 
@@ -46,9 +52,19 @@
   color: #D8973C;
 }
 
+.a2 a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .a3 a:link, .a3 a:visited, .a3 a:hover, .a3 a:active  { 
   text-decoration:none;
   color: #B6212B;
+}
+
+.a3 a:hover {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .a4 a:link, .a4 a:visited, .a4 a:hover, .a4 a:active  { 
@@ -56,7 +72,17 @@
   color: #7CA982;
 }
 
+.a4 a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .a5 a:link, .a5 a:visited, .a5 a:hover, .a5 a:active  { 
   text-decoration:none;
   color: #357266;
+}
+
+.a5 a:hover {
+  text-decoration: underline;
+  font-weight: bold;
 }
