@@ -2,64 +2,73 @@
   <h3 class="form-group">Veuillez entrer les détails de votre nouvel item</h3>
 
   <form>
-      <%= form_for(@picture) do |f| %>
+    <%= form_for(@picture) do |f| %>
 
-        <div class="form-group">
-          <%= f.label :name, "Indiquez le nom" %>
-          <%= f.text_field :name, class:"form-control form-control-lg", placeholder:"(champ obligatoire)" %>
-        </div>
+      <div class="form-group">
+        <%= f.label :name, "Indiquez le nom" %>
+        <%= f.text_field :name, class:"form-control", placeholder:"(champ obligatoire)" %>
+      </div>
 
-        <div class="form-group">
-          <%= f.label :description, "Ajoutez une description" %>
-          <%= f.text_area :description, class:"form-control" %>
-        </div>
+      <div class="form-group">
+        <%= f.label :description, "Ajoutez une description" %>
+        <%= f.text_area :description, class:"form-control" %>
+      </div>
 
-        <div class="form-group">
-          <p>Sur quel page souhaitez-vous ajoutez votre nouvel item ?</p>
-          <div class="form-check form-check-inline">
-            <%= f.check_box :is_home_item, class:"form-check-input" %>
-            <%= f.label :is_home_item, "Page d'accueil" %>
+
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <%= f.label :category, "Ajoutez une catégorie" %>
+            <%= f.text_field :category, class:"form-control" %>
           </div>
 
-          <div class="form-check form-check-inline">
-            <%= f.check_box :is_portfolio_item, class:"form-check-input" %>
-            <%= f.label :is_portfolio_item, "Portfolio" %>
-          </div>
-
-          <div class="form-check form-check-inline">
-            <%= f.check_box :is_sketchbook_item, class:"form-check-input" %>
-            <%= f.label :is_sketchbook_item, "Sketchbook" %>
-          </div>
-
-          <div class="form-check form-check-inline">
-            <%= f.check_box :is_shopping_item, class:"form-check-input" %>
-            <%= f.label :is_shopping_item, "Shopping" %>
+          <div class="col">
+            <%= f.label :price, "Indiquez le prix (si nécessaire)" %>
+            <%= f.number_field :price, class:"form-control", placeholder:"0,00$ CAD" %>
           </div>
         </div>
+      </div>
 
-        <div class="form-group">
-          <div class="row">
-            <div class="col">
-              <%= f.label :category, "Ajoutez une catégorie" %>
-              <%= f.text_field :category, class:"form-control" %>
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <p>Sur quel page souhaitez-vous ajouter votre nouvel item ?</p>
+              <div>
+                <%= f.check_box :is_home_item %>
+                <%= f.label :is_home_item, "Page d'accueil" %>
+              </div>
+
+              <div>
+                <%= f.check_box :is_portfolio_item %>
+                <%= f.label :is_portfolio_item, "Work" %>
+              </div>
+
+              <div>
+                <%= f.check_box :is_sketchbook_item %>
+                <%= f.label :is_sketchbook_item, "Sketchbook" %>
+              </div>
+
+            <div>
+              <%= f.check_box :is_shopping_item %>
+              <%= f.label :is_shopping_item, "Boutique" %>
             </div>
+          </div>
 
-            <div class="col">
-              <%= f.label :price, "Indiquez le prix (si nécessaire)" %>
-              <%= f.number_field :price, class:"form-control" %>
+          <div class="col">
+            <div class="form-group">
+              <%= f.label :photo, "Sélectionnez votre image" %>
+              <%= f.file_field :photo, class:"form-control-file" %>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="form-group">
-          <%= f.label :photo, "Sélectionnez votre image" %>
-          <%= f.file_field :photo, class:"form-control-file" %>
-        </div>
+      <div class="form-group">
+        <%= f.submit class:"btn btn-lg btn-primary" %>
+      </div>
 
-        <div class="form-group">
-          <%= f.submit class:"btn btn-lg btn-primary" %>
-        </div>
-      <% end %>
+    <% end %>
   </form>
 
   <p><%= link_to 'Back to the main page', root_path %></p>
