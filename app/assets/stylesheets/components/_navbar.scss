@@ -8,10 +8,6 @@
   top: 0px;
 }
 
-.navbar p {
-  color: inherit;
-}
-
 .logo {
   width: 50%;
   height: 33px;
@@ -35,10 +31,32 @@
   letter-spacing: 0.05em;
 }
 
-.a1 {
+.logo a:link, .logo a:visited, .logo a:hover, .logo a:active  { 
+  text-decoration:none;
+  color: #000000;
+}
+
+.a1 a:link, .a1 a:visited, .a1 a:hover, .a1 a:active  { 
+  text-decoration:none;
   color: #204676;
 }
 
-.a2 {
+.a2 a:link, .a2 a:visited, .a2 a:hover, .a2 a:active  { 
+  text-decoration:none;
   color: #D8973C;
+}
+
+.a3 a:link, .a3 a:visited, .a3 a:hover, .a3 a:active  { 
+  text-decoration:none;
+  color: #B6212B;
+}
+
+.a4 a:link, .a4 a:visited, .a4 a:hover, .a4 a:active  { 
+  text-decoration:none;
+  color: #7CA982;
+}
+
+.a5 a:link, .a5 a:visited, .a5 a:hover, .a5 a:active  { 
+  text-decoration:none;
+  color: #357266;
 }
