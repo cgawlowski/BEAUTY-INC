@@ -1,9 +1,16 @@
-<h1>Shopping</h1>
-<p></p>
-<% @pictures.each do |picture| %>
-  <% if picture.is_shopping_item == true %>
-    <h2><%= picture.name %></h2>
-    <p><%= picture.description %></p>
-    <%= link_to "See details", picture_path(picture)  %>
-  <% end %>
-<% end %>
+<h1>Boutique</h1>
+
+ <div class="row justify-content-start">
+    <% @pictures.each do |picture|  %>
+      <% if picture.is_shopping_item == true %>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h4 class="card-title"><strong><%= picture.name %></strong></h4>
+              <%= link_to "See details", picture_path(picture), class: "btn btn-info" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
