@@ -1,8 +1,6 @@
 <h1><%= @picture.name %></h1>
     <p><%= @picture.description %></p>
-    <p><%= @picture.format %></p>
     <p><%= @picture.category %></p>
-    <p><%= @picture.publishing_date %></p>
     <% if @picture.is_shopping_item == true %>
         <p><%= @picture.price %></p>
     <% end %>
