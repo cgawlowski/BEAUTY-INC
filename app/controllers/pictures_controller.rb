@@ -14,7 +14,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     if @picture.save
-      redirect_to root_path(@picture)
+      redirect_to root_path(@picture), notice: "Picture was successfully created"
     else
       render :new
     end
