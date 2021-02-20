@@ -2,7 +2,7 @@
   <h3 class="form-group">Veuillez entrer les détails de votre nouvel item</h3>
 
   <form>
-    <%= form_for(@picture, local: true) do |f| %>
+    <%= form_with(model: @picture, local: true) do |f| %>
       <div class="form-group">
         <%= f.label :name, "Indiquez le nom" %>
         <%= f.text_field :name, class:"form-control", placeholder:"(champ obligatoire)" %>
