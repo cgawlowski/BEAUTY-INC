@@ -1,8 +1,7 @@
 <div class="container">  
   <h3 class="form-group">Veuillez entrer les détails de votre nouvel item</h3>
 
-  <form>
-    <%= form_with(model: @picture, local: true) do |f| %>
+    <%= form_with model: @picture, method: :post do |f| %>
       <div class="form-group">
         <%= f.label :name, "Indiquez le nom" %>
         <%= f.text_field :name, class:"form-control", placeholder:"(champ obligatoire)" %>
@@ -56,7 +55,6 @@
         <%= f.submit class:"btn btn-lg btn-primary" %>
       </div>
     <% end %>
-  </form>
 
   <p><%= link_to 'Back to the main page', root_path %></p>
 </div>
