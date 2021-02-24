@@ -26,7 +26,7 @@ class PicturesController < ApplicationController
 
   def update
     @picture = Picture.find(params[:id])
-    @picture.update(params[:restaurant])
+    @picture.update(params[:picture])
   end
 
   def destroy

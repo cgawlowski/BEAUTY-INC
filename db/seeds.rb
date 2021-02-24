@@ -8,35 +8,16 @@
 puts "Cleaning database..."
 Picture.destroy_all
 
-pictures = Picture.create(
-  name: "Natation",
-  description: "Des gens en train de nager",
-  category: "voyage",
-  price: nil,
-  is_home_item: false,
-  is_portfolio_item: false,
-  is_sketchbook_item: true,
-  is_shopping_item: false
-  )
 
-pictures = Picture.create(
-  name: "Sortie d'ecole",
-  description: "Des parents allant chercher des efants a l'ecole",
-  category: "ville",
-  price: nil,
-  is_home_item: false,
-  is_portfolio_item: true,
-  is_sketchbook_item: false,
-  is_shopping_item: false
+30.times do
+  Picture.create(
+    name: Faker::Book.title ,
+    description: Faker::Games::Pokemon.move,
+    category: Faker::Games::Pokemon.name,
+    price: rand(15..150),
+    is_home_item: Faker::Boolean.boolean,
+    is_portfolio_item: Faker::Boolean.boolean,
+    is_sketchbook_item: Faker::Boolean.boolean,
+    is_shopping_item: Faker::Boolean.boolean
   )
-
-pictures = Picture.create(
-  name: "Marguerite",
-  description: "Un bouquet de fleurs",
-  category: "nature",
-  price: 50.00,
-  is_home_item: false,
-  is_portfolio_item: false,
-  is_sketchbook_item: false,
-  is_shopping_item: true
-  )
+end
