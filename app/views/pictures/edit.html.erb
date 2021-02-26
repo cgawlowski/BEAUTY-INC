@@ -1,7 +1,7 @@
 <div class="container">  
   <h3 class="form-group">Veuillez modifier votre item</h3>
 
-    <%= form_with model: @picture, method: :post do |f| %>
+    <%= form_with model: @picture, method: :patch do |f| %>
       <div class="form-group">
         <%= f.label :name, "Indiquez le nom" %>
         <%= f.text_field :name, class:"form-control", placeholder:"(champ obligatoire)" %>
