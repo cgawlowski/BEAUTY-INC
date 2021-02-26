@@ -1,35 +1,27 @@
 <div class="container">  
-  <h3 class="form-group">Veuillez entrer vos modifications</h3>
+  <h3 class="form-group">Veuillez modifier votre item</h3>
 
-  <form>
-    <%= form_for(@picture) do |f| %>
-
+    <%= form_with model: @picture, method: :post do |f| %>
       <div class="form-group">
         <%= f.label :name, "Indiquez le nom" %>
         <%= f.text_field :name, class:"form-control", placeholder:"(champ obligatoire)" %>
       </div>
-
       <div class="form-group">
         <%= f.label :description, "Ajoutez une description" %>
         <%= f.text_area :description, class:"form-control" %>
       </div>
-
-
-
       <div class="form-group">
         <div class="row">
           <div class="col">
             <%= f.label :category, "Ajoutez une catégorie" %>
             <%= f.text_field :category, class:"form-control" %>
           </div>
-
           <div class="col">
             <%= f.label :price, "Indiquez le prix (si nécessaire)" %>
             <%= f.number_field :price, class:"form-control", placeholder:"0,00$ CAD" %>
           </div>
         </div>
       </div>
-
       <div class="form-group">
         <div class="row">
           <div class="col">
@@ -38,23 +30,19 @@
                 <%= f.check_box :is_home_item %>
                 <%= f.label :is_home_item, "Page d'accueil" %>
               </div>
-
               <div>
                 <%= f.check_box :is_portfolio_item %>
                 <%= f.label :is_portfolio_item, "Work" %>
               </div>
-
               <div>
                 <%= f.check_box :is_sketchbook_item %>
                 <%= f.label :is_sketchbook_item, "Sketchbook" %>
               </div>
-
             <div>
               <%= f.check_box :is_shopping_item %>
               <%= f.label :is_shopping_item, "Boutique" %>
             </div>
           </div>
-
           <div class="col">
             <div class="form-group">
               <%= f.label :photo, "Sélectionnez votre image" %>
@@ -63,13 +51,10 @@
           </div>
         </div>
       </div>
-
       <div class="form-group">
         <%= f.submit class:"btn btn-lg btn-primary" %>
       </div>
-
     <% end %>
-  </form>
 
   <p><%= link_to 'Back to the main page', root_path %></p>
 </div>

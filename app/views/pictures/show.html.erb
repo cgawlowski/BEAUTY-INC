@@ -5,6 +5,8 @@
         <p><%= @picture.price %></p>
     <% end %>
 
+<p><%= link_to "Modifier l'image", edit_picture_path  %></p>
+
 <% if @picture.is_home_item == true %>
         <%= link_to "Back to the Home page", root_path  %>
     <% elsif @picture.is_portfolio_item == true %>
