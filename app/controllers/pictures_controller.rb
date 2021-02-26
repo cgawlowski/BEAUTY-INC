@@ -32,7 +32,6 @@ class PicturesController < ApplicationController
   def destroy
     @picture.destroy
     redirect_to root_path(@picture), notice: "Picture was successfully deleted"
-
   end
 
   private

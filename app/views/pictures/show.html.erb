@@ -6,7 +6,7 @@
     <% end %>
 
 <p><%= link_to "Modifier l'image", edit_picture_path(@picture)  %></p>
-<p><%= link_to "Supprimer l'image", picture_path(@picture), method: :delete  %></p>
+<p><%= link_to "Supprimer l'image", picture_path(@picture), method: :delete, data: { confirm: "T'es bien certaine, Beauty Luv XX ?" }  %></p>
 
 <% if @picture.is_home_item == true %>
         <%= link_to "Back to the Home page", root_path  %>
