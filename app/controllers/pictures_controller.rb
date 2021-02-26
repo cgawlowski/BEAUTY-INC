@@ -26,10 +26,15 @@ class PicturesController < ApplicationController
 
   def update
     @picture = Picture.find(params[:id])
-    @picture.update(params[:picture])
+    @picture.update(picture_params)
+    redirect_to picture_path(@picture), notice: "Picture was successfully edited"
   end
 
   def destroy
+    @picture = Picture.find(params[:id])
+    @picture.destroy
+    redirect_to root_path(@picture), notice: "Picture was successfully deleted"
+
   end
 
   private

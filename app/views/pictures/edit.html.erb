@@ -56,5 +56,12 @@
       </div>
     <% end %>
 
-  <p><%= link_to 'Back to the main page', root_path %></p>
-</div>
+<% if @picture.is_home_item == true %>
+        <%= link_to "Back to the Home page", root_path  %>
+    <% elsif @picture.is_portfolio_item == true %>
+        <%= link_to "Back to the portfolio", portfolio_path  %>
+    <% elsif @picture.is_sketchbook_item == true %>
+        <%= link_to "Back to the sketchbook", sketchbook_path  %>
+    <% else @picture.is_shopping_item == true %>
+        <%= link_to "Back to the shopping page", shopping_path  %>
+<% end %></div>
