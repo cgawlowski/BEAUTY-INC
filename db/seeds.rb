@@ -46,6 +46,6 @@ end
     is_portfolio_item: false,
     is_sketchbook_item: false,
     is_shopping_item: true,
-    preview_picture: "https://res.cloudinary.com/dus151ezt/image/upload/v1614446104/jf03h4tuvrj8zluxsrkqu1pjqq2o.jpg"
+    preview_picture: "https://res.cloudinary.com/dus151ezt/image/upload/v1614127010/5s6z8a6rwu6qsgq09orajrt61zhd.jpg"
   )
 end
