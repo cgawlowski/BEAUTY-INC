@@ -1,17 +1,13 @@
 <h1>Portfolio</h1>
-
- <div class="row justify-content-start">
-    <% @pictures.each do |picture|  %>
+<div class="grid-container">
+  <% @pictures.each do |picture|  %>
+    <div class="grid-item">
       <% if picture.is_portfolio_item == true %>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <%= image_tag picture.preview_picture, class: "card-img-top"%>
-              <h4 class="card-title"><strong><%= picture.name %></strong></h4>
-              <%= link_to "See details", picture_path(picture), class: "btn btn-info" %>
-            </div>
-          </div>
-        </div>
+        <%= image_tag picture.preview_picture %>
+        <h4><strong><%= picture.name %></strong></h4>
+        <%= link_to "See details", picture_path(picture) %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
+</div>
+
