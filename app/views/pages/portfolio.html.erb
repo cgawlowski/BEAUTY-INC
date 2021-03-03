@@ -1,11 +1,13 @@
-<h1>Portfolio</h1>
+<h1 class="page-title">Portfolio</h1>
 <div class="grid-container">
   <% @pictures.each do |picture|  %>
     <div class="grid-item">
       <% if picture.is_portfolio_item == true %>
-        <div class="image"><%= image_tag picture.preview_picture %></div>
-        <h4><strong><%= picture.name %></strong></h4>
-        <%= link_to "See details", picture_path(picture) %>
+        <div><%= image_tag picture.preview_picture %>
+          <div class="picture-name">
+            <%= link_to picture.name, picture_path(picture) %>
+          </div>
+        </div>
       <% end %>
     </div>
   <% end %>

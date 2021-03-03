@@ -15,6 +15,23 @@
 }
 
 img {
-  height: 700px;
+  height: 900px;
   width: auto;
+}
+
+.picture-name a:link, .picture-name a:visited, .picture-name a:active  { 
+  font-family: Ovo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 36px;
+  // display: flex;
+  // align-items: center;
+  // text-align: center;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.picture-name a:hover {
+  font-weight: bold;
 }
