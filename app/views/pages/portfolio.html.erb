@@ -3,7 +3,7 @@
   <% @pictures.each do |picture|  %>
     <div class="grid-item">
       <% if picture.is_portfolio_item == true %>
-        <%= image_tag picture.preview_picture %>
+        <div class="image"><%= image_tag picture.preview_picture %></div>
         <h4><strong><%= picture.name %></strong></h4>
         <%= link_to "See details", picture_path(picture) %>
       <% end %>
