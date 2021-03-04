@@ -3,13 +3,12 @@
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 10px;
   justify-content: space-evenly;
 
 }
 
 .grid-item {
-  padding: 20px;
+  margin: 20px;
   font-size: 30px;
   text-align: center;
 }
@@ -25,9 +24,6 @@ img {
   font-weight: normal;
   font-size: 32px;
   line-height: 36px;
-  // display: flex;
-  // align-items: center;
-  // text-align: center;
   letter-spacing: 0.05em;
   color: #000000;
 }
