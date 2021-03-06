@@ -1,34 +1,38 @@
 //Portfolio design
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-evenly;
+// .grid-container {
+//   display: grid;
+//   grid-template-columns: auto auto auto;
+//   justify-content: space-evenly;
+// }
 
+// .grid-item {
+//   margin: 20px;
+//   font-size: 30px;
+//   text-align: center;
+// }
+
+.card img {
+  display: block;
+  width: 100%;
 }
 
-.grid-item {
-  margin: 20px;
-  font-size: 30px;
-  text-align: center;
-}
-
-img {
-  height: 900px;
-  width: auto;
-  border-radius: 10px;
-}
-
-.picture-name a:link, .picture-name a:visited, .picture-name a:active  { 
+.card-title a:link, .card-title a:visited, .card-title a:active  {
   font-family: Ovo;
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
   line-height: 36px;
   letter-spacing: 0.05em;
-  color: #000000;
+  color: white;
+  text-align: center;
 }
 
-.picture-name a:hover {
-  font-weight: bold;
+.card:hover .overlay {
+  opacity: 1;
 }
+
+
+// .picture-name a:hover {
+//   font-weight: bold;
+// }
