@@ -1,23 +1,35 @@
 <div class="container">
-    <h1><%= @picture.name %></h1>
-    <%= image_tag @picture.preview_picture, class: "card-img-top"%>
-    <p><%= @picture.description %></p>
-    <p><%= @picture.category %></p>
-    <% if @picture.is_shopping_item == true %>
-        <p><%= @picture.price %></p>
-    <% end %>
+    <div class="row">
 
-    <p><%= link_to "Modifier l'image", edit_picture_path(@picture)  %></p>
-    <p><%= link_to "Supprimer l'image", picture_path(@picture), method: :delete, data: { confirm: "T'es bien certaine, Beauty Luv XX ?" }  %></p>
+        <div class="col-8">
+            <div class="picture">
+                <%= image_tag @picture.preview_picture %>
+            </div>
+        </div>
 
-    <% if @picture.is_home_item == true %>
-            <%= link_to "Back to the Home page", root_path  %>
-        <% elsif @picture.is_portfolio_item == true %>
-            <%= link_to "Back to the portfolio", portfolio_path  %>
-        <% elsif @picture.is_sketchbook_item == true %>
-            <%= link_to "Back to the sketchbook", sketchbook_path  %>
-        <% else @picture.is_shopping_item == true %>
-            <%= link_to "Back to the shopping page", shopping_path  %>
-    <% end %>
+        <div class="col">
+            <div class="picture-details">
+                <h1><%= @picture.name %></h1>
+                <p><%= @picture.description %></p>
+                <p><%= @picture.category %></p>
+                <% if @picture.is_shopping_item == true %>
+                    <p><%= @picture.price %>$ CAD</p>
+                <% end %>
+            </div>
 
+            <div class="picture-menu">
+            <p><%= link_to "Modifier l'image", edit_picture_path(@picture)  %></p>
+            <p><%= link_to "Supprimer l'image", picture_path(@picture), method: :delete, data: { confirm: "T'es bien certaine, Beauty Luv XX ?" }  %></p>
+                <% if @picture.is_home_item == true %>
+                        <%= link_to "Back to the Home page", root_path  %>
+                    <% elsif @picture.is_portfolio_item == true %>
+                        <%= link_to "Back to the portfolio", portfolio_path  %>
+                    <% elsif @picture.is_sketchbook_item == true %>
+                        <%= link_to "Back to the sketchbook", sketchbook_path  %>
+                    <% else @picture.is_shopping_item == true %>
+                        <%= link_to "Back to the shopping page", shopping_path  %>
+                <% end %>
+            </div>
+        </div>
+    </div>
 </div>
