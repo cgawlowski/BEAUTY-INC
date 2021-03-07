@@ -1,0 +1,30 @@
+.container h1 {
+  margin-bottom: 20px;
+  font-family: Ovo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+}
+
+.container p {
+  font-family: Quattrocento Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+}
+
+.container a:link, .container a:visited, .container a:active  { 
+  text-decoration:none;
+  width: 50%;
+  height: 33px;
+  font-family: Quattrocento Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 33px;
+  color: #000000;
+}
