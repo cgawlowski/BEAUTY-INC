@@ -15,23 +15,31 @@
 .card img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
-.card-title a:link, .card-title a:visited, .card-title a:active  {
+.card-img-overlay .card-title a:link, .card-title a:visited, .card-title a:active  {
   font-family: Ovo;
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 40px;
+  line-height: 45px;
   letter-spacing: 0.05em;
   color: white;
-  text-align: center;
 }
 
-.card:hover .overlay {
+.card-img-overlay {
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(216, 151, 60, 0.85);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.card:hover .card-img-overlay {
   opacity: 1;
 }
-
 
 // .picture-name a:hover {
 //   font-weight: bold;
