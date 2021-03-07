@@ -1,16 +1,12 @@
 //Portfolio design
 
-// .grid-container {
-//   display: grid;
-//   grid-template-columns: auto auto auto;
-//   justify-content: space-evenly;
-// }
-
-// .grid-item {
-//   margin: 20px;
-//   font-size: 30px;
-//   text-align: center;
-// }
+.card-img-overlay {
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(216, 151, 60, 0.85);
+  display: flex;
+  justify-content: center;
+}
 
 .card img {
   display: block;
@@ -28,19 +24,28 @@
   color: white;
 }
 
-.card-img-overlay {
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(216, 151, 60, 0.85);
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
+
 
 .card:hover .card-img-overlay {
   opacity: 1;
 }
 
+.card-columns {
+  margin: 20px;
+}
+
 // .picture-name a:hover {
 //   font-weight: bold;
+// }
+
+// .grid-container {
+//   display: grid;
+//   grid-template-columns: auto auto auto;
+//   justify-content: space-evenly;
+// }
+
+// .grid-item {
+//   margin: 20px;
+//   font-size: 30px;
+//   text-align: center;
 // }
