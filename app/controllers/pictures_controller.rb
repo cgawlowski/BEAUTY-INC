@@ -15,7 +15,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     if @picture.save
-      redirect_to root_path(@picture), notice: "Picture was successfully created"
+      redirect_to root_path(@picture), notice: "L'image a bien été créée"
     else
       render :new
     end
@@ -26,12 +26,12 @@ class PicturesController < ApplicationController
 
   def update
     @picture.update(picture_params)
-    redirect_to picture_path(@picture), notice: "Picture was successfully edited"
+    redirect_to picture_path(@picture), notice: "L'image a bien été mise à jour"
   end
 
   def destroy
     @picture.destroy
-    redirect_to root_path(@picture), notice: "Picture was successfully deleted"
+    redirect_to root_path(@picture), notice: "L'image a bien été supprimée"
   end
 
   private
