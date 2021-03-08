@@ -1,0 +1,197 @@
+.form-login {
+  background: white;
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.link {
+    color: #408AB4;
+    text-decoration: none;
+  }
+
+.remember_me{
+  transition-duration: 0.4s;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.left-section {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-animation-name: left-section;
+          animation-name: left-section;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.right-section-signup {
+  flex: 1;
+  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
+  transition: 1s;
+  background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1615169669/Beauty%27s%20website/studio-ghibli-inspired-fan-art-paintings-oil-watercolor-1-5832aa0d3b58f__880_a0erlr.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.right-section-login {
+  flex: 1;
+  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
+  transition: 1s;
+  background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1615169669/Beauty%27s%20website/studio-ghibli-inspired-fan-art-paintings-oil-watercolor-1-5832aa0d3b58f__880_a0erlr.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.right-section-password {
+  flex: 1;
+  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
+  transition: 1s;
+  background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1615169669/Beauty%27s%20website/studio-ghibli-inspired-fan-art-paintings-oil-watercolor-1-5832aa0d3b58f__880_a0erlr.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header > h1 {
+  margin: 0;
+  color: #F2994A;
+}
+.header > h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.form {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.form > p {
+  text-align: right;
+}
+.form > p > a {
+  // color: #000;
+  font-size: 14px;
+}
+.form-field {
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+}
+.form-field:focus {
+  border-color: #0f7ef1;
+}
+.button-form {
+  transition-duration: 0.4s;
+  background-color: #F2994A;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px 12px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
+  cursor: pointer;
+}
+.animation {
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.a1 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.a2 {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+.a3 {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.a4 {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.a5 {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.a6 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.a7 {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes left-section {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}
