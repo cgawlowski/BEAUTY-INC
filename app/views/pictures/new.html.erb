@@ -45,8 +45,8 @@
           </div>
           <div class="col">
             <div class="form-group">
-              <%= f.label :photos, "Sélectionnez votre image" %>
-              <%= f.file_field :photos, class:"form-control-file" %>
+              <%= f.label :photos, "Sélectionnez vos images" %>
+              <%= f.file_field :photos, multiple: true, class:"form-control-file" %>
             </div>
           </div>
         </div>
