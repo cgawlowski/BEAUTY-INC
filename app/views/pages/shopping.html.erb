@@ -1,5 +1,5 @@
 <div class="page-title">
-  <h1>Boutique</h1>
+  <h1><%= link_to "Add a new item", new_picture_path  %></h1>
 </div>
 
 <div class="card-columns">
@@ -9,7 +9,7 @@
       <% if picture.is_shopping_item == true %>
       
       <div class="card">
-        <div class="card-img"><%= image_tag picture.preview_picture %></div>
+
         <div class="card-img-overlay">
           <h3 class="card-title d-flex align-items-center "><%= link_to picture.name, picture_path(picture) %></h3>
         </div>
