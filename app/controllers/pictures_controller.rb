@@ -38,7 +38,7 @@ class PicturesController < ApplicationController
   private
 
   def picture_params
-    params.require(:picture).permit(:name, :description, :category, :price, :is_home_item, :is_portfolio_item, :is_sketchbook_item, :is_shopping_item, :photos)
+    params.require(:picture).permit(:name, :description, :category, :price, :is_home_item, :is_portfolio_item, :is_sketchbook_item, :is_shopping_item, photos: [])
   end
 
   def set_picture

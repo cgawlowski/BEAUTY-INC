@@ -3,7 +3,9 @@
 
         <div class="col-8">
             <div class="picture">
-                <%= cl_image_tag @picture.photos.key, height: 300, width: 400, crop: :fill %>
+                <% @picture.photos.each do |photo| %>
+                    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                <% end %>
             </div>
         </div>
 
