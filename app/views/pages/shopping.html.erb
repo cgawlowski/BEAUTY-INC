@@ -10,7 +10,10 @@
         <div class="card">
           <div class="card-img">
             <% picture.photos.each do |photo| %>
-              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+              <% if picture.photos[0] %>
+                <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                <% break  %> 
+              <% end %>
             <% end %>
           </div>
           <div class="card-img-overlay">
