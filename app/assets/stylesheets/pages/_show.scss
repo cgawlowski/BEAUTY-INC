@@ -19,11 +19,26 @@
   margin-bottom: 20px;
 }
 
-.pictures-details p {
+.picture-details p {
   font-family: Quattrocento Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;
   line-height: 32px;
   letter-spacing: 0.05em;
+}
+
+.picture-menu a:link, .picture-menu a:visited, .picture-menu a:active { 
+  text-decoration: none;
+  font-family: Quattrocento Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: black;
+}
+
+.picture-menu a:hover {
+  text-decoration: underline;
+  font-weight: bold;
 }

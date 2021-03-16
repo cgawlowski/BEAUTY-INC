@@ -12,7 +12,7 @@
             <% picture.photos.each do |photo| %>
               <% if picture.photos[0] %>
                 <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-                <% break  %> 
+                <% break %> 
               <% end %>
             <% end %>
           </div>
