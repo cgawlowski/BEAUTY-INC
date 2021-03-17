@@ -15,6 +15,8 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new(picture_params)
+    # @picture.user = current_user
+
     if @picture.save
       redirect_to root_path(@picture), notice: "L'image a bien été créée"
     else
