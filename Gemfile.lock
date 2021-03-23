@@ -171,6 +171,8 @@ GEM
       nio4r (~> 2.0)
     puma (4.3.7-java)
       nio4r (~> 2.0)
+    pundit (2.1.0)
+      activesupport (>= 3.0.0)
     racc (1.5.2)
     racc (1.5.2-java)
     rack (2.2.3)
@@ -284,6 +286,8 @@ GEM
       unf_ext
     unf (0.1.4-java)
     unf_ext (0.0.7.7)
+    unf_ext (0.0.7.7-x64-mingw32)
+    unf_ext (0.0.7.7-x86-mingw32)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.1.0)
@@ -331,6 +335,7 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma (~> 4.1)
+  pundit
   rails (~> 6.0.3, >= 6.0.3.3)
   redis (~> 4.0)
   sass-rails (>= 6)
