@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_27_184205) do
+ActiveRecord::Schema.define(version: 2021_03_23_015034) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_02_27_184205) do
     t.boolean "is_sketchbook_item"
     t.boolean "is_shopping_item"
     t.string "preview_picture"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
