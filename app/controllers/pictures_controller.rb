@@ -11,11 +11,13 @@ class PicturesController < ApplicationController
 
   def new
     @picture = Picture.new
+    authorize @picture
   end
 
   def create
     @picture = Picture.new(picture_params)
     @picture.user = current_user
+    authorize @picture
 
     if @picture.save
       redirect_to root_path(@picture), notice: "L'image a bien été créée"
