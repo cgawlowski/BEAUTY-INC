@@ -3,7 +3,7 @@ class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
   
   def index
-    @pictures = Picture.all
+    @pictures = policy_scope(Picture)
   end
 
   def show
@@ -47,6 +47,7 @@ class PicturesController < ApplicationController
 
   def set_picture
     @picture = Picture.find(params[:id])
+    authorize @picture
   end
   
 end

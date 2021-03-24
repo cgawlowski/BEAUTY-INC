@@ -13,4 +13,16 @@ class PicturePolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
+  # def edit?
+  #   user == record.user
+  # end
+
+  def update?
+    user == record.user
+  end
+
 end
