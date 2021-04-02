@@ -13,7 +13,7 @@
             <div class="picture-details">
                 <h1><%= @picture.name %></h1>
                 <p><%= @picture.description %></p>
-                <p><%= @picture.category %></p>
+                <p>Catégorie: <%= @picture.category %></p>
                 <% if @picture.is_shopping_item == true %>
                     <p><%= @picture.price %>$ CAD</p>
                 <% end %>

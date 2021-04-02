@@ -5,7 +5,9 @@
   <div class="menu">
 
     <div>
-      <%= link_to "new?", new_picture_path %>
+      <% if user_signed_in? && current_user.admin == true  %> 
+        <%= link_to "new?", new_picture_path %>
+      <% end %>
     </div>
     
     <div class="a1">
