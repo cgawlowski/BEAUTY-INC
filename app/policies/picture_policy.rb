@@ -6,7 +6,7 @@ class PicturePolicy < ApplicationPolicy
   end
 
   def new?
-    true
+    user.admin == true
   end
 
   def create?
