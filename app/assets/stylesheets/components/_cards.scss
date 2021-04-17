@@ -27,23 +27,11 @@
 .card:hover .card-img-overlay {
   opacity: 1;
 }
+.card-title a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
 
 .card-columns {
   margin: 20px;
 }
-
-// .picture-name a:hover {
-//   font-weight: bold;
-// }
-
-// .grid-container {
-//   display: grid;
-//   grid-template-columns: auto auto auto;
-//   justify-content: space-evenly;
-// }
-
-// .grid-item {
-//   margin: 20px;
-//   font-size: 30px;
-//   text-align: center;
-// }

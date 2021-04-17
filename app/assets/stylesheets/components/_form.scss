@@ -27,13 +27,10 @@
 * {
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-  padding: 0;
-}
+
 .container-devise {
   display: flex;
-  height: 100vh;
+  height: 75vh;
 }
 .left-section {
   overflow: hidden;
@@ -41,6 +38,7 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
   -webkit-animation-name: left-section;
           animation-name: left-section;
   -webkit-animation-duration: 1s;
@@ -56,6 +54,8 @@ body {
   transition: 1s;
   background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1615169669/Beauty%27s%20website/studio-ghibli-inspired-fan-art-paintings-oil-watercolor-1-5832aa0d3b58f__880_a0erlr.jpg);
   background-size: cover;
+  height: 100%;
+  width: auto;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -66,6 +66,8 @@ body {
   transition: 1s;
   background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1615169669/Beauty%27s%20website/studio-ghibli-inspired-fan-art-paintings-oil-watercolor-1-5832aa0d3b58f__880_a0erlr.jpg);
   background-size: cover;
+  height: 100%;
+  width: auto;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -76,6 +78,8 @@ body {
   transition: 1s;
   background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1615169669/Beauty%27s%20website/studio-ghibli-inspired-fan-art-paintings-oil-watercolor-1-5832aa0d3b58f__880_a0erlr.jpg);
   background-size: cover;
+  height: 100%;
+  width: auto;
   background-repeat: no-repeat;
   background-position: center;
 }
