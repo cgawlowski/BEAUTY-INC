@@ -1,8 +1,13 @@
 // Specific CSS for your home-page
 
-#intro {
+.container-intro {
+  display: flex;
+  height: 70vh;
+  margin: 20px;
+}
+
+.container-intro p {
   margin: 10px auto;
-  margin-left: 40px;
   margin-right: 20px;
   font-family: Ovo;
   font-style: normal;
@@ -19,8 +24,42 @@
   background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1618877933/Beauty%27s%20website/Capture_zh1vf4.png);
   border-radius: 10px;
   background-size: cover;
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.left-section-intro {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  -webkit-animation-name: left-section;
+          animation-name: left-section;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@keyframes left-section-intro {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
 }
