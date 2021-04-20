@@ -7,7 +7,6 @@
 }
 
 .container-intro p {
-  margin: 10px auto;
   margin-right: 20px;
   font-family: Ovo;
   font-style: normal;
@@ -35,22 +34,7 @@
 }
 
 
-.left-section-intro {
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  -webkit-animation-name: left-section;
-          animation-name: left-section;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
+
 
 @keyframes left-section-intro {
   0% {
