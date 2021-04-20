@@ -1,12 +1,26 @@
 // Specific CSS for your home-page
 
 #intro {
-  margin: 20px auto;
+  margin: 10px auto;
   margin-left: 40px;
+  margin-right: 20px;
   font-family: Ovo;
   font-style: normal;
   font-weight: normal;
-  font-size: 55px;
+  font-size: 50px;
   line-height: 69px;
   color: #000000;
+}
+
+.right-section-intro {
+  flex: 1;
+  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
+  transition: 1s;
+  background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1618877933/Beauty%27s%20website/Capture_zh1vf4.png);
+  border-radius: 10px;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
