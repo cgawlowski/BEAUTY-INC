@@ -21,12 +21,41 @@
   background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
   transition: 1s;
   background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1618877933/Beauty%27s%20website/Capture_zh1vf4.png);
-  border-radius: 10px;
+  border-radius: 110px;
   background-size: cover;
   height: 100%;
   width: auto;
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start a:link, .start a:visited, .start a:active {
+  text-decoration: none;
+  font-size: 150px;
+  opacity: 1;
+  color: red; 
+  animation-name: start;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+.start a:hover {
+  font-size: 165px;
+}
+
+@keyframes start {
+  0% {
+    color: red; 
+  }
+  100% {
+    color: yellow;
+  }
 }
 
 * {
