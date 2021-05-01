@@ -25,19 +25,30 @@
   background-size: cover;
   height: 100%;
   width: auto;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   opacity: 0.3;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: right-section;
+  animation-duration: 3s;
+}
+
+@keyframes right-section {
+  0% {
+    flex: 0;
+  }
+  100% {
+    flex: 1;
+  }
 }
 
 .start a:link, .start a:visited, .start a:active {
   text-decoration: none;
   font-size: 150px;
   opacity: 1;
-  color: red; 
+  color: #DEA658; 
   animation-name: start;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -46,24 +57,32 @@
 }
 
 .start a:hover {
-  font-size: 165px;
+  animation-name: start-hover;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes start-hover {
+  0% {
+    font-size: 150px;
+  }
+  100% {
+    font-size: 165px;
+  }
 }
 
 @keyframes start {
   0% {
-    color: red; 
+    color: #FFFFFF; 
   }
   100% {
-    color: yellow;
+    color: #DEA658;
   }
 }
 
 * {
   box-sizing: border-box;
 }
-
-
-
 
 @keyframes left-section-intro {
   0% {
