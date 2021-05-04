@@ -3,11 +3,11 @@
 .container-intro {
   display: flex;
   height: 70vh;
-  margin: 20px;
+  margin: 40px;
 }
 
 .container-intro p {
-  margin-right: 20px;
+  margin-right: 40px;
   font-family: Ovo;
   font-style: normal;
   font-weight: normal;
@@ -18,19 +18,13 @@
 
 .right-section-intro {
   flex: 1;
-  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
   transition: 1s;
-  background-image: url(https://res.cloudinary.com/dus151ezt/image/upload/v1618877933/Beauty%27s%20website/Capture_zh1vf4.png);
   border-radius: 110px;
-  background-size: cover;
-  height: 100%;
-  width: auto;
-  background-repeat: repeat;
-  background-position: center;
-  opacity: 0.3;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: auto;
   animation-name: right-section;
   animation-duration: 3s;
 }
@@ -47,22 +41,15 @@
 .start a:link, .start a:visited, .start a:active {
   text-decoration: none;
   font-size: 150px;
-  opacity: 1;
   color: #DEA658; 
   animation-name: start;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-
-}
-
-.start a:hover {
-  animation-name: start-hover;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-@keyframes start-hover {
+
+@keyframes start {
   0% {
     font-size: 150px;
   }
@@ -71,27 +58,6 @@
   }
 }
 
-@keyframes start {
-  0% {
-    color: #FFFFFF; 
-  }
-  100% {
-    color: #DEA658;
-  }
-}
-
 * {
   box-sizing: border-box;
-}
-
-@keyframes left-section-intro {
-  0% {
-    opacity: 0;
-    width: 0;
-  }
-  100% {
-    opacity: 1;
-    padding: 20px 40px;
-    width: 440px;
-  }
 }
