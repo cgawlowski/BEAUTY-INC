@@ -1,7 +1,14 @@
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
 .author-picture {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 90%;
   height: auto;
+  border-radius: 25px;
 }
 
 .about h1 {
