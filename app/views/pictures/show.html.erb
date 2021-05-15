@@ -65,7 +65,7 @@
                 <h1><%= @picture.name %></h1>
                 <p><%= @picture.description %></p>
                 <% if @picture.is_shopping_item == true %>
-                    <p><%= @picture.price %>$ CAD</p>
+                    <p>Prix: <%= @picture.price.round() %>$</p>
                 <% end %>
             </div>
             <div class="picture-menu">

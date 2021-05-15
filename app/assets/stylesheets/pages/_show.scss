@@ -8,6 +8,10 @@
   margin-right: auto
 }
 
+.back-to a:link, .back-to a:visited, .back-to a:active { 
+  text-decoration: none;
+}
+
 .picture img {
   display: block;
   margin-left: auto;
