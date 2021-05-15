@@ -4,11 +4,13 @@
 }
 
 .author-picture {
-  display: flex;
-  align-items: center;
-  width: 90%;
+  width: 70%;
   height: auto;
+  padding: 15px;
   border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .about h1 {

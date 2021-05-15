@@ -37,8 +37,6 @@
   font-weight: bold;
 }
 
-
-
 .a1 a:link, .a1 a:visited, .a1 a:hover, .a1 a:active  { 
   text-decoration:none;
   color: #204676;
@@ -89,7 +87,8 @@
   font-weight: bold;
 }
 
-
-.active {
-  background-color: #4CAF50;
+.active-item {
+  font-weight: bold;
+  font-size: 37px;
 }
+
