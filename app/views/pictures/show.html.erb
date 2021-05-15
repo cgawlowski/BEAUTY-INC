@@ -25,6 +25,7 @@
 
 <div class="container-show">
     <div class="row">
+    
         <div class="back-to">
             <i class="fas fa-long-arrow-alt-left"></i>
             <% if @picture.is_home_item == true %>
@@ -59,7 +60,7 @@
             </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-5">
             <div class="picture-details">
                 <h1><%= @picture.name %></h1>
                 <p><%= @picture.description %></p>
@@ -67,10 +68,10 @@
                     <p><%= @picture.price %>$ CAD</p>
                 <% end %>
             </div>
-            <div id="picture-menu">
+            <div class="picture-menu">
                 <% if current_user == @picture.user %>
-                    <p><%= link_to "Modifier l'image", edit_picture_path(@picture)  %></p>
-                    <p><%= link_to "Supprimer l'image", picture_path(@picture), method: :delete, data: { confirm: "T'es bien certaine, Beauty Luv XXX ?" }  %></p>
+                    <p class="btn btn-primary"><%= link_to "Modifier l'image", edit_picture_path(@picture) %></p>
+                    <p class="btn btn-primary"><%= link_to "Supprimer l'image", picture_path(@picture), method: :delete, data: { confirm: "T'es bien certaine, Beauty Luv XXX ?" }  %></p>
                 <% end %>
             </div>
         </div>
