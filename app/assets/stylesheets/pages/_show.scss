@@ -1,11 +1,21 @@
-.row {
-  width: 90%;
+.container-show {
+  margin: 20px;
+}
+
+.back-to {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .picture img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+
   width: 100%;
   height: auto;
+  border-radius: 4px;
 }
 
 .picture-details h1 {
