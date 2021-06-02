@@ -38,6 +38,21 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
 
+# Payment gems
+gem 'pay', '~> 2.0'
+
+# To use Stripe, also include:
+gem 'stripe', '< 6.0', '>= 2.8'
+
+# To use Braintree + PayPal, also include:
+gem 'braintree', '< 3.0', '>= 2.92.0'
+
+# To use Paddle, also include:
+gem 'paddle_pay', '~> 0.1'
+
+# To use Receipts
+gem 'receipts', '~> 1.0.0'
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_24_032454) do
+ActiveRecord::Schema.define(version: 2021_05_28_003503) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -31,6 +31,42 @@ ActiveRecord::Schema.define(version: 2021_03_24_032454) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "pay_charges", force: :cascade do |t|
+    t.string "owner_type"
+    t.integer "owner_id"
+    t.string "processor", null: false
+    t.string "processor_id", null: false
+    t.integer "amount", null: false
+    t.integer "amount_refunded"
+    t.string "card_type"
+    t.string "card_last4"
+    t.string "card_exp_month"
+    t.string "card_exp_year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.json "data"
+    t.string "currency"
+    t.integer "application_fee_amount"
+    t.integer "pay_subscription_id"
+  end
+
+  create_table "pay_subscriptions", force: :cascade do |t|
+    t.string "owner_type"
+    t.integer "owner_id"
+    t.string "name", null: false
+    t.string "processor", null: false
+    t.string "processor_id", null: false
+    t.string "processor_plan", null: false
+    t.integer "quantity", default: 1, null: false
+    t.datetime "trial_ends_at"
+    t.datetime "ends_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "status"
+    t.json "data"
+    t.decimal "application_fee_percent", precision: 8, scale: 2
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -57,6 +93,15 @@ ActiveRecord::Schema.define(version: 2021_03_24_032454) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false
+    t.json "pay_data"
+    t.string "processor"
+    t.string "processor_id"
+    t.datetime "trial_ends_at"
+    t.string "card_type"
+    t.string "card_last4"
+    t.string "card_exp_month"
+    t.string "card_exp_year"
+    t.text "extra_billing_info"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
