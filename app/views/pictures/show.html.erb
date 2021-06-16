@@ -25,19 +25,28 @@
 
 <div class="container-show">
     <div class="row">
-    
-      <div class="back-to">
-        <i class="fas fa-long-arrow-alt-left"></i>
-        <% if @picture.is_home_item == true %>
-                <%= link_to "Back to the Home page", root_path  %>
-            <% elsif @picture.is_portfolio_item == true %>
-                <%= link_to "Back to the Portfolio", portfolio_path  %>
-            <% elsif @picture.is_sketchbook_item == true %>
-                <%= link_to "Back to the Sketchbook", sketchbook_path  %>
-            <% else @picture.is_shopping_item == true %>
-                <%= link_to "Back to the Shopping page", shopping_path  %>
-        <% end %>
+
+      <div class="picture-menu">
+        <div class="back-to">
+          <i class="fas fa-long-arrow-alt-left"></i>
+          <% if @picture.is_home_item == true %>
+                  <%= link_to "Back to the Home page", root_path  %>
+              <% elsif @picture.is_portfolio_item == true %>
+                  <%= link_to "Back to the Portfolio", portfolio_path  %>
+              <% elsif @picture.is_sketchbook_item == true %>
+                  <%= link_to "Back to the Sketchbook", sketchbook_path  %>
+              <% else @picture.is_shopping_item == true %>
+                  <%= link_to "Back to the Shopping page", shopping_path  %>
+          <% end %>
+        </div>
+        <div class="picture-options">
+          <% if current_user == @picture.user %>
+            <p class="btn btn-info"><%= link_to "Modifier l'image", edit_picture_path(@picture) %></p>
+            <p class="btn btn-info"><%= link_to "Supprimer l'image", picture_path(@picture), method: :delete, data: { confirm: "T'es bien certaine, Beauty Luv XXX ?" }  %></p>
+          <% end %>
+        </div>
       </div>
+
         
       <div class="col-5">
           <div class="picture">
@@ -64,18 +73,13 @@
 
         <div class="col-5">
             <div class="picture-details">
-                <h1><%= @picture.name %></h1>
-                <p><%= @picture.description %></p>
-                <% if @picture.is_shopping_item == true %>
-                    <p>Prix: <%= @picture.price.round() %>$</p>
-                <% end %>
+              <h1><%= @picture.name %></h1>
+              <p><%= @picture.description %></p>
+              <% if @picture.is_shopping_item == true %>
+                <p class="btn btn-warning btn-lg btn-block">Achat (<%= @picture.price.round()%>$)</p>
+              <% end %>
             </div>
-            <div class="picture-menu">
-                <% if current_user == @picture.user %>
-                    <p class="btn btn-primary"><%= link_to "Modifier l'image", edit_picture_path(@picture) %></p>
-                    <p class="btn btn-primary"><%= link_to "Supprimer l'image", picture_path(@picture), method: :delete, data: { confirm: "T'es bien certaine, Beauty Luv XXX ?" }  %></p>
-                <% end %>
-            </div>
+ 
         </div>
     </div>
 </div>
