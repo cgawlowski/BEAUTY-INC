@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   # Pictures routes
   resources :pictures
 
+  # Checkout routes
+  post "checkout/create", to: "checkout#create"
+
 end
