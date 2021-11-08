@@ -1,18 +1,21 @@
-class CheckoutCountroller < ApplicationController
+class CheckoutController < ApplicationController
 
   def create
+    @picture = Picture.find(params[:id])
     @session = Stripe::Checkout::Session.create({
       payment_method_types: ['card'],
-      line_items: [{
+      line_items: [
         name: picture.name,
         amount: picture.price,
-        currency: "cad",
+        currency: 'cad',
         quantity: 1
-      }],
+      ],
       mode: 'payment',
-      success_url: 'https://example.com/success',
-      cancel_url: 'https://example.com/cancel',
+      success_url: root_url,
+      cancel_url: root_url,
     })
+    respond_to do |format|
+      format.js
+    end
   end
-
 end
