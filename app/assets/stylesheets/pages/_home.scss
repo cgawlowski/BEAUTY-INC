@@ -11,23 +11,11 @@
   font-family: Ovo;
   font-style: normal;
   font-weight: normal;
-  font-size: 50px;
-  line-height: 69px;
+  font-size: 35px;
+  line-height: 55px;
   color: #000000;
 }
 
-.right-section-intro {
-  flex: 1;
-  transition: 1s;
-  border-radius: 110px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: auto;
-  animation-name: right-section;
-  animation-duration: 3s;
-}
 
 @keyframes right-section {
   0% {
