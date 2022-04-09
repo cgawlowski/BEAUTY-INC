@@ -3,27 +3,37 @@
 .container-intro {
   display: flex;
   height: 62vh;
-  margin: 40px;
+  margin: 20px 40px 40px 20px;
+  text-align: center;
+  flex-direction: row;
+}
+
+.top-element {
+  display: flex;
+  align-items: flex-start;
+}
+
+.bottom-element {
+  display: flex;
+  align-items: flex-end;
 }
 
 .container-intro p {
-  margin-right: 40px;
   font-family: Ovo;
   font-style: normal;
   font-weight: normal;
-  font-size: 35px;
-  line-height: 55px;
-  color: #000000;
+  font-size: 30px;
+  line-height: 40px;
+  color: black;
 }
 
-
-@keyframes right-section {
-  0% {
-    flex: 0;
-  }
-  100% {
-    flex: 1;
-  }
+.front--picture {
+  max-width: 65%;
+  max-height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
 }
 
 .start a:link, .start a:visited, .start a:active {
