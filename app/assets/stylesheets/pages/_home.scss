@@ -6,16 +6,9 @@
   margin: 20px 40px 40px 20px;
   text-align: center;
   flex-direction: row;
-}
-
-.top-element {
-  display: flex;
-  align-items: flex-start;
-}
-
-.bottom-element {
-  display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  padding:70px;
 }
 
 .container-intro p {
@@ -24,17 +17,10 @@
   font-weight: normal;
   font-size: 30px;
   line-height: 40px;
-  color: black;
+  color: white;
 }
 
-.front--picture {
-  max-width: 65%;
-  max-height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 8px;
-}
+
 
 .start a:link, .start a:visited, .start a:active {
   text-decoration: none;
