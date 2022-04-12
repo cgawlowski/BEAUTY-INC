@@ -4,23 +4,56 @@
   display: flex;
   height: 62vh;
   margin: 20px 40px 40px 20px;
-  text-align: center;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding:70px;
+  background-color: #D29540;
+}
+
+.container-intro > img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 70px;
+}
+
+.text--intro {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  padding: 20px;
+  margin-left: 30px;
 }
 
 .container-intro p {
   font-family: Ovo;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 40px;
+  text-align: left;
+  font-size: 40px;
+  line-height: 45px;
   color: white;
 }
 
+//Text animation section
 
+.intro--animation {
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.b2 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+// Next page button animation
 
 .start a:link, .start a:visited, .start a:active {
   text-decoration: none;
