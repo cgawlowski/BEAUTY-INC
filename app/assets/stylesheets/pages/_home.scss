@@ -3,40 +3,24 @@
 .container-intro {
   display: flex;
   height: 62vh;
-  margin: 40px;
+  margin: 20px 40px 40px 20px;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:70px;
 }
 
 .container-intro p {
-  margin-right: 40px;
   font-family: Ovo;
   font-style: normal;
   font-weight: normal;
-  font-size: 50px;
-  line-height: 69px;
-  color: #000000;
+  font-size: 30px;
+  line-height: 40px;
+  color: white;
 }
 
-.right-section-intro {
-  flex: 1;
-  transition: 1s;
-  border-radius: 110px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: auto;
-  animation-name: right-section;
-  animation-duration: 3s;
-}
 
-@keyframes right-section {
-  0% {
-    flex: 0;
-  }
-  100% {
-    flex: 1;
-  }
-}
 
 .start a:link, .start a:visited, .start a:active {
   text-decoration: none;
