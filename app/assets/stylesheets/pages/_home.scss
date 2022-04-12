@@ -53,12 +53,29 @@
           animation-delay: 1s;
 }
 
+.b3 {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
 // Next page button animation
+
+.start {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-solid {
+  color: #414F7B;
+  font-size: 35px;
+
+}
 
 .start a:link, .start a:visited, .start a:active {
   text-decoration: none;
   font-size: 150px;
-  color: #DEA658; 
+  color: black; 
   animation-name: start;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
@@ -68,13 +85,19 @@
 
 @keyframes start {
   0% {
-    font-size: 150px;
+    font-size: 50px;
   }
   100% {
-    font-size: 165px;
+    font-size: 60px;
   }
 }
 
 * {
   box-sizing: border-box;
+}
+
+// Shopping page
+
+.portfolio--container {
+  background-color: aqua;
 }
