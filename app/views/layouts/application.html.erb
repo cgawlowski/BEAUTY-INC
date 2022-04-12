@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="https://js.stripe.com/v3/"></script>
-
+    <script src="https://kit.fontawesome.com/2bdbf08b81.js" crossorigin="anonymous"></script>
     <meta property="og:site_name" content="Stéphanie Simpson"/>
     <meta property="og:title" content="Stéphanie Simpson"/>
     <meta property="og:url" content="https://blanc-et-beige.herokuapp.com/"/>
@@ -23,8 +23,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   
   </head>
+  
+  <style>
 
-  <body style="background: #FFFDFB;">
+    html {
+      scroll-behavior: smooth;
+      background: #FFFDFB;
+    }
+  </style>
+
+  <body>
   
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
